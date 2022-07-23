@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Zen+Dots&display=swap");
 *:where(:not(html, iframe, canvas, img, svg, video):not(svg *, symbol *)) {
   all: unset;
   display: revert;
@@ -67,4 +68,164 @@ meter {
 
 :root {
   font-size: 62.5%;
+  --clr-blue-dark: hsl(203, 82%, 13%);
+  --clr-blue-dark-transp: hsl(203 85% 13% / 0.8);
+  --clr-blue-ocean: hsl(216, 84%, 47%);
+  --clr-blue-sky: hsl(204, 100%, 64%);
+  --clr-blue-pale: hsl(197, 100%, 94%);
+  --clr-grey-light: hsl(50, 10%, 98%);
+  --clr-invalid: hsl(351, 94%, 64%);
+  --clr-valid: hsl(161, 46%, 54%);
+  --fnt-fam-default: "Poppins", sans-serif;
+  --fnt-fam-title: "Zen Dots", cursive;
+  --fnt-size-default: 1.6rem;
+  --fnt-size-blurb: 1.8rem;
+  --fnt-size-title: 3.5rem;
+  --fnt-weight-lighter: 200;
+  --fnt-weight-light: 300;
+  --fnt-weight-default: 400;
+  --fnt-weight-heavy: 500;
+  --fnt-weight-heavier: 700;
+  --fnt-weight-title: var(--fnt-weight-heavier);
+  --fnt-weight-blurb: var(--fnt-weight-heavy);
+}
+
+.title-text {
+  font-family: var(--fnt-fam-title);
+  font-size: var(--fnt-size-title);
+  color: var(--clr-blue-pale);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: var(--clr-blue-pale);
+  font-family: var(--fnt-fam-default);
+  font-size: var(--fnt-size-default);
+  line-height: 2.5rem;
+}
+
+.main-area {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "header signup signup";
+  background: var(--clr-grey-light);
+  width: min(80%, 144rem);
+  height: 80%;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.41);
+}
+
+.header-area {
+  grid-area: header;
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas: "." "." "title" "." "." "." ".";
+  background: url("../assets/images/header-bg-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-blue-dark-transp);
+  padding: 3rem;
+}
+
+.icon-code {
+  height: 4rem;
+  aspect-ratio: 1;
+  fill: white;
+  margin-right: 2rem;
+}
+
+.signup {
+  grid-area: signup;
+  display: grid;
+  grid-template-rows: 1fr max-content max-content 1fr;
+  grid-template-areas: "." "cta" "form" ".";
+  align-content: center;
+  background: var(--clr-grey-light);
+}
+
+.cta {
+  grid-area: cta;
+  font-size: 1.8rem;
+  font-weight: var(--fnt-weight-heavy);
+  padding: 4rem;
+  max-width: 60ch;
+}
+.cta-text:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.form {
+  grid-area: form;
+  display: grid;
+  gap: 4rem;
+  grid-template-rows: repeat(2, max-content);
+}
+.form__signup {
+  background: white;
+  padding: 4rem;
+  box-shadow: 0px 6px 14px -5px rgba(0, 0, 0, 0.41);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "legend legend";
+}
+.form__signup-legend {
+  grid-area: legend;
+  padding-bottom: 2rem;
+  font-weight: var(--fnt-weight-heavy);
+  font-size: 2rem;
+}
+.form__label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.form__input {
+  text-transform: none;
+  border-radius: 0.8rem;
+  width: 80%;
+  padding: 0.2rem 1rem;
+  margin-bottom: 1.5rem;
+}
+.form__input:empty {
+  border: 2px solid #eeeeee;
+}
+.form__input:hover, .form__input:active, .form__input:focus {
+  border: 2px solid var(--clr-blue-ocean);
+}
+.form__input:focus {
+  box-shadow: 0px 6px 14px -5px rgba(0, 0, 0, 0.41);
+}
+.form__input:invalid {
+  border: 2px solid var(--clr-invalid);
+}
+
+.btn {
+  background: var(--clr-blue-ocean);
+  margin-left: 4rem;
+  padding: 1rem 4rem;
+  display: inline;
+  width: max-content;
+  border-radius: 0.8rem;
+  box-shadow: 0px 6px 14px -5px rgba(0, 0, 0, 0.41);
+  color: var(--clr-grey-light);
+  transition: all 0.2s ease;
+}
+.btn:hover {
+  color: var(--clr-blue-dark);
+  background: var(--clr-blue-sky);
+}
+
+.invalid {
+  border: 2px solid var(--clr-invalid);
 }/*# sourceMappingURL=main.css.map */

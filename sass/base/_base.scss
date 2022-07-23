@@ -1,3 +1,11 @@
 @use "../abstracts/" as a;
 @use "typography";
 @use "root";
+
+body {
+  @include a.bodyCenter();
+  background: var(--clr-blue-pale);
+  font-family: var(--fnt-fam-default);
+  font-size: var(--fnt-size-default);
+  line-height: 2.5rem;
+}

@@ -1,0 +1,22 @@
+.signup {
+  grid-area: signup;
+  display: grid;
+  grid-template-rows: 1fr max-content max-content 1fr;
+  grid-template-areas: "." "cta" "form" ".";
+  align-content: center;
+  background: var(--clr-grey-light);
+}
+
+.cta {
+  grid-area: cta;
+  font-size: 1.8rem;
+  font-weight: var(--fnt-weight-heavy);
+  padding: 4rem;
+  max-width: 60ch;
+
+  &-text {
+    &:not(:last-child) {
+      margin-bottom: 2.5rem;
+    }
+  }
+}

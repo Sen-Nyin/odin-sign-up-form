@@ -3,7 +3,30 @@
 
   // Colours
 
-  // Fonts
+  --clr-blue-dark: hsl(203, 82%, 13%);
+  --clr-blue-dark-transp: hsl(203 85% 13% / 0.8);
+  --clr-blue-ocean: hsl(216, 84%, 47%);
+  --clr-blue-sky: hsl(204, 100%, 64%);
+  --clr-blue-pale: hsl(197, 100%, 94%);
+  --clr-grey-light: hsl(50, 10%, 98%);
+  --clr-invalid: hsl(351, 94%, 64%);
+  --clr-valid: hsl(161, 46%, 54%);
 
+  // Fonts
+  --fnt-fam-default: "Poppins", sans-serif;
+  --fnt-fam-title: "Zen Dots", cursive;
+
+  --fnt-size-default: 1.6rem;
+  --fnt-size-blurb: 1.8rem;
+  --fnt-size-title: 3.5rem;
+
+  --fnt-weight-lighter: 200;
+  --fnt-weight-light: 300;
+  --fnt-weight-default: 400;
+  --fnt-weight-heavy: 500;
+  --fnt-weight-heavier: 700;
+
+  --fnt-weight-title: var(--fnt-weight-heavier);
+  --fnt-weight-blurb: var(--fnt-weight-heavy);
   // Paddings & Margins
 }

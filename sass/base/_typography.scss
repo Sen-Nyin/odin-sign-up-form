@@ -1,1 +1,10 @@
 @use "root";
+@use "../abstracts/" as a;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Zen+Dots&display=swap");
+
+.title-text {
+  font-family: var(--fnt-fam-title);
+  font-size: var(--fnt-size-title);
+  color: var(--clr-blue-pale);
+}
