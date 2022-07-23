@@ -64,6 +64,7 @@
 }
 
 .btn {
+  cursor: pointer;
   background: var(--clr-blue-ocean);
   padding: 1rem 4rem;
   display: inline;
@@ -91,4 +92,20 @@
 
 .no-password-match {
   color: var(--clr-invalid);
+}
+
+.login {
+  &-text {
+    margin-left: 4rem;
+  }
+  &-link {
+    font-weight: var(--fnt-weight-heavy);
+    &:link,
+    &:visited {
+      color: var(--clr-blue-ocean);
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

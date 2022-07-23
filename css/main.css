@@ -242,6 +242,7 @@ body {
 }
 
 .btn {
+  cursor: pointer;
   background: var(--clr-blue-ocean);
   padding: 1rem 4rem;
   display: inline;
@@ -269,4 +270,17 @@ body {
 
 .no-password-match {
   color: var(--clr-invalid);
+}
+
+.login-text {
+  margin-left: 4rem;
+}
+.login-link {
+  font-weight: var(--fnt-weight-heavy);
+}
+.login-link:link, .login-link:visited {
+  color: var(--clr-blue-ocean);
+}
+.login-link:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=main.css.map */
