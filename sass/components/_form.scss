@@ -1,16 +1,30 @@
+@use "../abstracts/responsive" as a;
+
 .form {
   grid-area: form;
   display: grid;
+  width: 90%;
+  justify-content: stretch;
+  margin-inline: auto;
+  border-radius: 0.5rem;
   gap: 4rem;
   grid-template-rows: repeat(2, max-content);
+
+  @include a.breakpoint(xl, min) {
+    width: 100%;
+  }
   &__signup {
+    // width: 1fr;
     background: white;
     padding: 4rem;
     box-shadow: 0px 6px 14px -5px rgba(0, 0, 0, 0.41);
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "legend legend";
+    grid-template-areas: "legend";
 
+    @include a.breakpoint(850, min) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "legend legend";
+    }
     &-legend {
       grid-area: legend;
       padding-bottom: 2rem;
@@ -28,7 +42,7 @@
   &__input {
     text-transform: none;
     border-radius: 0.8rem;
-    width: 80%;
+    width: 90%;
     padding: 0.2rem 1rem;
     margin-bottom: 1.5rem;
 
@@ -54,7 +68,6 @@
 
 .btn {
   background: var(--clr-blue-ocean);
-  margin-left: 4rem;
   padding: 1rem 4rem;
   display: inline;
   width: max-content;
@@ -62,6 +75,12 @@
   box-shadow: 0px 6px 14px -5px rgba(0, 0, 0, 0.41);
   color: var(--clr-grey-light);
   transition: all 0.2s ease;
+  justify-self: center;
+
+  @include a.breakpoint(xl, min) {
+    justify-self: start;
+    margin-left: 4rem;
+  }
 
   &:hover {
     color: var(--clr-blue-dark);

@@ -4,8 +4,10 @@
 
 body {
   @include a.bodyCenter();
-  background: var(--clr-blue-pale);
+  background-color: var(--clr-blue-pale);
   font-family: var(--fnt-fam-default);
   font-size: var(--fnt-size-default);
   line-height: 2.5rem;
+  padding: 3rem;
+  // background: url("../assets/images/top-left.svg") left top no-repeat;
 }
