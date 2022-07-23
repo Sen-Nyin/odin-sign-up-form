@@ -3,6 +3,7 @@
 const submitButton = document.getElementById("submit");
 const password = document.getElementById("password");
 const passwordConfirm = document.getElementById("passwordConfirm");
+const passwordNoMatch = document.querySelector(".no-password-match");
 
 submitButton.addEventListener("click", () => validate());
 
@@ -15,12 +16,20 @@ const validate = () => {
   console.log(secondPassword);
 
   if (!firstPassword) {
-    password.classList.toggle("invalid");
+    password.classList.add("invalid");
+    passwordNoMatch.textContent = `* You must enter a valid password!`;
   } else if (!secondPassword) {
-    passwordConfirm.classList.toggle("invalid");
+    passwordConfirm.classList.add("invalid");
+    password.classList.remove("invalid");
+    passwordNoMatch.textContent = `* You must confirm your password!`;
   } else if (firstPassword !== secondPassword) {
     console.log(password.classList);
-    password.classList.toggle("invalid");
-    passwordConfirm.classList.toggle("invalid");
+    password.classList.add("invalid");
+    passwordConfirm.classList.add("invalid");
+    passwordNoMatch.textContent = `* Your passwords don't match!`;
+  } else {
+    password.classList.remove("invalid");
+    passwordConfirm.classList.remove("invalid");
+    passwordNoMatch.textContent = ``;
   }
 };

@@ -45,10 +45,7 @@
     width: 90%;
     padding: 0.2rem 1rem;
     margin-bottom: 1.5rem;
-
-    &:empty {
-      border: 2px solid #eeeeee;
-    }
+    border: 2px solid #eeeeee;
 
     &:hover,
     &:active,
@@ -90,4 +87,8 @@
 
 .invalid {
   border: 2px solid var(--clr-invalid);
+}
+
+.no-password-match {
+  color: var(--clr-invalid);
 }

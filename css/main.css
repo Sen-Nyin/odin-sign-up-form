@@ -229,8 +229,6 @@ body {
   width: 90%;
   padding: 0.2rem 1rem;
   margin-bottom: 1.5rem;
-}
-.form__input:empty {
   border: 2px solid #eeeeee;
 }
 .form__input:hover, .form__input:active, .form__input:focus {
@@ -267,4 +265,8 @@ body {
 
 .invalid {
   border: 2px solid var(--clr-invalid);
+}
+
+.no-password-match {
+  color: var(--clr-invalid);
 }/*# sourceMappingURL=main.css.map */
