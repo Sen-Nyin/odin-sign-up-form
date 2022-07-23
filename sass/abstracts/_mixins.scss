@@ -1,0 +1,10 @@
+@mixin bodyCenter() {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+@mixin center() {
+  display: grid;
+  place-items: center;
+}
