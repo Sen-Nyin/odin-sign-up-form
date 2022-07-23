@@ -7,7 +7,12 @@ body {
   background-color: var(--clr-blue-pale);
   font-family: var(--fnt-fam-default);
   font-size: var(--fnt-size-default);
+  font-weight: var(--fnt-weight-default);
   line-height: 2.5rem;
   padding: 3rem;
   // background: url("../assets/images/top-left.svg") left top no-repeat;
+}
+
+em {
+  font-style: italic;
 }
