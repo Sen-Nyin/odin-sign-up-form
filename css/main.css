@@ -52,7 +52,7 @@ meter {
   display: none;
 }
 
-:where([contenteditable]:not([contenteditable=false])) {
+:where([contenteditable]:not([contenteditable="false"])) {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
   overflow-wrap: break-word;
@@ -62,7 +62,7 @@ meter {
   user-select: auto;
 }
 
-:where([draggable=true]) {
+:where([draggable="true"]) {
   -webkit-user-drag: element;
 }
 
@@ -117,6 +117,7 @@ em {
   grid-template-areas: "header" "signup";
   background: var(--clr-grey-light);
   width: min(95%, 144rem);
+
   border-radius: 0.8rem;
   overflow: hidden;
   box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.41);
@@ -126,7 +127,7 @@ em {
   .main-area {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "header signup signup";
-    height: 80%;
+    height: max(80rem, 95%);
     padding-bottom: 0;
   }
 }
@@ -236,7 +237,9 @@ em {
   margin-bottom: 1.5rem;
   border: 2px solid #eeeeee;
 }
-.form__input:hover, .form__input:active, .form__input:focus {
+.form__input:hover,
+.form__input:active,
+.form__input:focus {
   border: 2px solid var(--clr-blue-ocean);
 }
 .form__input:focus {
@@ -283,9 +286,10 @@ em {
 .login-link {
   font-weight: var(--fnt-weight-heavy);
 }
-.login-link:link, .login-link:visited {
+.login-link:link,
+.login-link:visited {
   color: var(--clr-blue-ocean);
 }
 .login-link:hover {
   text-decoration: underline;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
